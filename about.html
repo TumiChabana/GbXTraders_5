@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBX Traders | Trading Tutoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style type="text/css">
+    .GbXTraders-section {
+    display: flex;
+    flex-direction: row;
+    background-color: black; /* Lighter shade of sky blue for a softer background */
+    color: #333; /* Darker text for better readability */
+    padding: 20px;
+    box-shadow: 0 4px 14px darkblue;
+    font-size: 30px;
+}
+
+.GbXTraders-content {
+    flex: 1;
+    padding: 20px;
+    background-color: black; /* Light blue background for a subtle contrast */
+    border-radius: 10px;
+}
+
+.GbXTraders-logo img {
+    width: 300px;
+    height: 600px;
+    border-radius: 10px; /* Added border radius */
+}
+
+.GbXTraders-description h2 {
+    color: #005f8f; /* Darker teal for better header visibility */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.GbXTraders-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333; /* Darker text for readability */
+}
+
+.GbXTraders-team img {
+    width: 500px;
+    height: 500px;
+    max-width: 100%; /* Ensure responsiveness */
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.GbXTraders-section,
+.company-section,
+.objectives-vision-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+    justify-content: center;
+    color: #333; /* Darker text for readability */
+    box-shadow: 0 4px 14px darkblue;
+    ;
+}
+
+.GbXTraders-content,
+.company-card,
+.objectives-vision-card {
+    background: #dff4ff; /* Softer blue for content cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.company-card .icon img,
+.GbXTraders-logo img {
+    width: 400px;
+    height: 200px; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.company-card h2,
+.objectives-vision-card h2,
+.GbXTraders-description h2 {
+    color: #007bb5; /* Consistent with brand color */
+}
+
+button.client-money-btn {
+    background: #00aced;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button.client-money-btn:hover {
+    background: #008bb2;
+}
+
+.GbXTraders-objectives-vision {
+    padding: 40px 20px;
+    background-color: black; /* Lighter blue for consistency */
+    box-shadow: 0 4px 14px darkblue;
+    
+}
+
+.about-GbXTraders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 30px;
+    background: black; /* Soft background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 14px darkblue;
+    overflow: hidden;
+}
+
+.GbXTraders-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.GbXTraders-content h2 {
+    color: #007bb5;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.GbXTraders-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black; /* Improved readability */
+}
+
+.belief {
+    background: black;
+    border-left: 5px solid #00aced;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white; /* Consistent text color */
+    box-shadow: 0 10px 20px rgba(0, 172, 237, 0.2);;
+}
+
+
+
+@media (max-width: 768px) {
+    .company-section {
+        padding: 10px;
+    }
+    .company-section .company-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .company-section .icon img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Header Section with Background Video -->
+    <header class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="bluematrix.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <!-- Navigation -->
+    <nav class="navbar">
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            <img src="logo2.png" alt="GBX TRADERS">
+            <p>Learn Forex, Crypto, and Indices Trading from Experts</p>
+            <a href="#courses" class="cta-btn">Start Learning</a>
+        </div>
+    </header>
+
+    <div class="GbXTraders-section">
+    <div class="GbXTraders-content">
+        <div class="GbXTraders-logo">
+            <img src="https://img.freepik.com/free-photo/stock-finance-business-banking-forex-money-concept_53876-122987.jpg?t=st=1730706118~exp=1730709718~hmac=5ab9c097ec1a5b9b0be20424cbe51961ab33ef80d6ebcd6ede9e545f49e22701&w=740" alt="GbXTraders">
+        </div>
+        <div class="GbXTraders-description">
+            <h2>ABOUT GbXTraders™</h2>
+            <p>GbXTraders is a global multi-asset fintech group operating proprietary technology-based trading platforms. GbXTraders offers customers a range of trading products, including Contracts for Difference ("CFDs"), share dealing, and futures trading. GbXTraders has a premium listing on the Main Market of the London Stock Exchange (symbol: PLUS) and is a constituent of the FTSE 250 index.</p>
+        </div>
+    </div>
+    <div class="GbXTraders-team">
+        <img src="https://img.freepik.com/free-photo/medium-shot-colleagues-working-together_23-2149337239.jpg?t=st=1730707908~exp=1730711508~hmac=a48aa501f0242890f622e84fcc6191e435618802ce9957467e18070009993665&w=740">
+    </div>
+</div>
+
+<div class="company-section">
+    <div class="company-card">
+        <div class="icon">
+            <img src="https://img.freepik.com/free-photo/forex-trading-workplace_1409-5578.jpg?t=st=1730706761~exp=1730710361~hmac=576bba7474de85fee7f38bf09ef461895588ab46b9b3a7efc8dc7a0e1c2fb040&w=740" alt="Trading Platform Icon">
+        </div>
+        <div class="content">
+            <h2>Who We Are</h2>
+            <p>The GbXTraders trading platform is offered by GbXTradersUK Ltd, a UK-based company with its main offices located in the city of London. The company is authorized and regulated by the Financial Conduct Authority (FCA) to offer Contracts For Difference (CFD). The company is a rapidly growing CFD provider in Europe and Asia and currently offers its portfolio of over 1000 instruments to over a million clients.</p>
+        </div>
+    </div>
+
+    <div class="company-card">
+        <div class="icon">
+            <img src="https://img.freepik.com/free-vector/unlocked-padlock-check-mark_78370-7848.jpg?t=st=1730706811~exp=1730710411~hmac=042e4c423152c57d48376256a0f899911ea5094a5c1d9ebd81a8dbd88393ee22&w=740" alt="Padlock Icon">
+        </div>
+        <div class="content">
+            <h2>Client Money</h2>
+            <p>GbXTradersUK Ltd will hold client funds on a segregated basis in accordance with the Financial Conduct Authority’s client money rules.</p>
+        </div>
+    </div>
+</div>
+
+
+    
+
+<div class="objectives-vision-section">
+    <div class="objectives-vision-card">
+        <div class="objectives-vision-content">
+            <h2>Our Vision</h2>
+            <p>We are continually strengthening our position as a multi-asset fintech group over time by expanding our core product offering to new and existing markets, launching new trading and financial products, and deepening our engagement with customers.</p>
+        </div>
+    </div>
+
+    <div class="objectives-vision-card">
+        <div class="objectives-vision-content">
+            <h2>Our Purpose</h2>
+            <p>GbXTraders operates across products, devices, and countries to provide our clients with reliable and intuitive access to financial opportunities.</p>
+        </div>
+    </div>
+
+    <div class="objectives-vision-card">
+        <div class="objectives-vision-content">
+            <h2>Our Values</h2>
+            <p>We consistently strive for excellence when it comes to our products and our team. With state-of-the-art proprietary technology and a customer-centric approach, our users are assured of a best-in-class trading service experience.</p>
+        </div>
+    </div>
+</div>
+
+<div class="GbXTraders-objectives-vision">
+    <div class="about-GbXTraders">
+        <div class="GbXTraders-content">
+            <h2>About GbXTraders</h2>
+            <p>GbXTraders strives to give every client the ability to efficiently trade any financial product around the globe including: Shares, Indices, Commodities, and Currencies. GbXTraders is a multi-asset trading platform. Our wide coverage includes UK, US, European and Asian exchanges. To provide our clients with the optimum trading platform, we have built strong execution relationships with many of the world’s largest international banks. These relationships offer the benefits of increased size of deals, better prices, and superior execution which, in turn, we pass onto our clients. Clients can also connect to our trading platform on multiple devices, from PCs to Macs to iPhone and Android smartphones and tablets.</p>
+        </div>
+    </div>
+
+    <div class="key-beliefs">
+        <div class="belief">
+            <h2>Transparency</h2>
+            <p>We make it clear to our clients exactly what they get and what they pay for. We pay no commission to our providers therefore our clients don't pay any commissions. It’s what we expect from our providers, it’s what our clients get from us.</p>
+        </div>
+
+        <div class="belief">
+            <h2>Professionalism</h2>
+            <p>Our product is designed with enhanced security ensuring safe and seamless trading. It’s what we expect from our providers, it’s what our clients get from us.</p>
+        </div>
+
+        <div class="belief">
+            <h2>The Human Side</h2>
+            <p>With over a million signups, GbXTraders is operated by a dynamic group of programmers. We have our ups and downs and successes and failures, just like you. Keep faith in yourself, don’t change your behavior, and continue going forward. It’s what we expect from our providers, it’s what our clients get from us.</p>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+     <!-- Footer -->
+    <footer>
+    <div class="footer-video-container">
+        <video class="background-video" autoplay muted loop>
+            <source src="bluematrix.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="footer-overlay">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Mission & Vision</a></li>
+                        <li><a href="https://www.jobs.ie/jobs/trading?cid=SEA_GO_IE-JIE-GEN---D%7C%7C%5BA%5D_c_general%20DSA--%7C--__RL_DSA1&gad_source=5&gclid=EAIaIQobChMIyurI7tu-iQMVCaKDBx26phrdEAAYASAAEgLXxPD_BwE">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Trading Courses</a></li>
+                        <li><a href="contact.html">Consulting</a></li>
+                        <li><a href="https://www.catalyze-group.com/service/business-consulting/data-insights/market-research/?utm_campaign=&utm_term=&gad_source=5&gclid=EAIaIQobChMIje3xo9y-iQMVhqSDBx3Yih5uEAAYAiAAEgIR-PD_BwE">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.challenge4trading.com/?mi_affiliate=c4t_lp&mi_subaffiliate=2005&mi_tag1=2005_1001&gad_source=5&gclid=EAIaIQobChMIsd-ozNy-iQMVEJ-DBx1DriRFEAAYASAAEgKFgvD_BwE">Blog</a></li>
+                        <li><a href="https://www.audible.co.uk/topic/audiobooks-trading-strategies?&source_code=PS1PP30DTRIAL453072523004T&ipRedirectOverride=true&gclid=EAIaIQobChMIyait7ty-iQMVgFeRBR0K2BCUEAAYAyAAEgKUI_D_BwE&gclsrc=aw.ds">E-books</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=_YVQN6_nkfs">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="contact.html">Email</a></li>
+                        <li><a href="https://syndicatedsearch.goog/aclk?sa=L&ai=DChcSEwiX3NKu3b6JAxU1oYMHHQ22NYoYABACGgJlZg&co=1&ase=2&gclid=EAIaIQobChMIl9zSrt2-iQMVNaGDBx0NtjWKEAAYASAAEgJZ-fD_BwE&sig=AOD64_3WP9WDQyDd4vjgdckx2uBSRlxw4g&q&nis=4&adurl=https://www.aquafunded.com/blogs/funded-trading-accounts?gc_id%3D21762747573%26h_ad_id%3D%26gad_source%3D5&nb=0&rurl=https%3A%2F%2Fwww.startpage.com%2F&nm=27&nx=257&ny=13&is=598x1082">Support</a></li>
+                        <li><a href="https://traders4traders.com/contact-us/">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://ls.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/login"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

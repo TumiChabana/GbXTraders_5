@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBX Traders | Trading Tutoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Ebook Section Specific Styles */
+        .ebook-section {
+            padding: 60px 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+
+        .ebook-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 50px;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .ebook-image {
+            flex: 1;
+            transform: perspective(1000px) rotateY(15deg);
+            transition: transform 0.3s ease;
+        }
+
+        .ebook-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .ebook-social-btn img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 8px; /* Space between image and text */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image fits within its container */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .ebook-content {
+            flex: 1;
+            color: #fff;
+        }
+
+        .ebook-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00aced;
+        }
+
+        .ebook-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .ebook-author {
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #f0f0f0;
+        }
+
+        .ebook-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ebook-input {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .ebook-checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+        }
+
+        .ebook-terms {
+            color: #00aced;
+            text-decoration: none;
+        }
+
+        .ebook-button {
+            background-color: #00aced;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .ebook-button:hover {
+            background-color: #008bb5;
+        }
+
+        .ebook-divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #f0f0f0;
+        }
+
+        .ebook-social {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ebook-social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+            text-decoration: none;
+            gap: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .ebook-social-btn:hover {
+            background-color: #333;
+        }
+
+        .ebook-privacy {
+            font-size: 0.8em;
+            color: #f0f0f0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .ebook-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .ebook-image {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero">
+        <!-- Your existing header content -->
+        <video autoplay muted loop class="background-video">
+            <source src="bluematrix.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <!-- Navigation -->
+    <nav class="navbar">
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            <img src="logo2.png" alt="GBX TRADERS">
+            <p>Learn Forex, Crypto, and Indices Trading from Experts</p>
+            <a href="#courses" class="cta-btn">Start Learning</a>
+        </div>
+    </header>
+
+    <!-- Ebook Section -->
+    <section class="ebook-section">
+        <div class="ebook-container">
+            <div class="ebook-image">
+                <img src="https://img.freepik.com/premium-photo/flyer-social-media-post-design-template-leaflet-cover-presentation-book-cover_1121250-358409.jpg?w=740" alt="How to trade the Forex Market book cover">
+            </div>
+            <div class="ebook-content">
+                <h2 class="ebook-title">Master the forex markets</h2>
+                <p class="ebook-subtitle">Claim a FREE e-book now!<br>Plus a free demo account to practice.</p>
+                <p class="ebook-author">This e-book has been brought to you by a veteran online trader and New YorkTimes bestselling author, Vince Stanzione.</p>
+                
+                <form class="ebook-form">
+                    <input type="email" placeholder="E-mail" required class="ebook-input">
+                    <div class="ebook-checkbox-container">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#" class="ebook-terms">terms and conditions</a></label>
+                    </div>
+                    <button type="submit" class="ebook-button">Get your free ebook now!</button>
+                    <p class="ebook-privacy">
+                        By pressing "Get your free ebook now!", you confirm that you are 18 or older. You understand that we may use your email address to send you information about our products and services as well as market news.
+                    </p>
+                </form>
+
+                <div class="ebook-divider">Or sign up with</div>
+
+                <div class="ebook-social">
+                    <a href="https://www.google.com/" class="ebook-social-btn">
+                        <img src="https://img.freepik.com/premium-photo/google-logo-is-shown-white-background_1315971-724.jpg?w=740" alt="Google icon"> Google
+                    </a>
+                    <a href="https://www.facebook.com/" class="ebook-social-btn">
+                        <img src="https://img.freepik.com/premium-photo/facebook-icon-blue-isolated-white_335552-2335.jpg?w=740" alt="Facebook icon"> Facebook
+                    </a>
+                    <a href="https://www.apple.com/" class="ebook-social-btn">
+                        <img src="https://img.freepik.com/premium-photo/apple-logo-wallpaper_551707-69548.jpg?w=900" alt="Apple icon"> Apple
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer>
+    <div class="footer-video-container">
+        <video class="background-video" autoplay muted loop>
+            <source src="bluematrix.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="footer-overlay">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Mission & Vision</a></li>
+                        <li><a href="https://www.jobs.ie/jobs/trading?cid=SEA_GO_IE-JIE-GEN---D%7C%7C%5BA%5D_c_general%20DSA--%7C--__RL_DSA1&gad_source=5&gclid=EAIaIQobChMIyurI7tu-iQMVCaKDBx26phrdEAAYASAAEgLXxPD_BwE">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Trading Courses</a></li>
+                        <li><a href="contact.html">Consulting</a></li>
+                        <li><a href="https://www.catalyze-group.com/service/business-consulting/data-insights/market-research/?utm_campaign=&utm_term=&gad_source=5&gclid=EAIaIQobChMIje3xo9y-iQMVhqSDBx3Yih5uEAAYAiAAEgIR-PD_BwE">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.challenge4trading.com/?mi_affiliate=c4t_lp&mi_subaffiliate=2005&mi_tag1=2005_1001&gad_source=5&gclid=EAIaIQobChMIsd-ozNy-iQMVEJ-DBx1DriRFEAAYASAAEgKFgvD_BwE">Blog</a></li>
+                        <li><a href="https://www.audible.co.uk/topic/audiobooks-trading-strategies?&source_code=PS1PP30DTRIAL453072523004T&ipRedirectOverride=true&gclid=EAIaIQobChMIyait7ty-iQMVgFeRBR0K2BCUEAAYAyAAEgKUI_D_BwE&gclsrc=aw.ds">E-books</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=_YVQN6_nkfs">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="contact.html">Email</a></li>
+                        <li><a href="https://syndicatedsearch.goog/aclk?sa=L&ai=DChcSEwiX3NKu3b6JAxU1oYMHHQ22NYoYABACGgJlZg&co=1&ase=2&gclid=EAIaIQobChMIl9zSrt2-iQMVNaGDBx0NtjWKEAAYASAAEgJZ-fD_BwE&sig=AOD64_3WP9WDQyDd4vjgdckx2uBSRlxw4g&q&nis=4&adurl=https://www.aquafunded.com/blogs/funded-trading-accounts?gc_id%3D21762747573%26h_ad_id%3D%26gad_source%3D5&nb=0&rurl=https%3A%2F%2Fwww.startpage.com%2F&nm=27&nx=257&ny=13&is=598x1082">Support</a></li>
+                        <li><a href="https://traders4traders.com/contact-us/">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://ls.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/login"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBX Traders | Trading Tutoring Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style type="text/css">
+        .markets-section {
+            padding: 80px 20px;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .markets-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .markets-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .markets-heading h2 {
+            font-size: 2.5rem;
+            color: #00aced;
+            margin-bottom: 20px;
+        }
+
+        .markets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+
+        }
+
+        .market-card {
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+        }
+
+        .market-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 172, 237, 0.2);
+        }
+
+        .market-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #00aced;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .market-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .market-image {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+    background: rgba(0, 172, 237, 0.1);
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for a subtle shadow */
+}
+
+.market-image img {
+    width: 500px;
+    height: 100px;
+    object-fit: cover; /* Use cover if you want a full fill */
+    border-radius: 5px; /* Ensures the image itself is circular */
+}
+
+
+        .market-title {
+            font-size: 1.5rem;
+            color: #00aced;
+            margin-bottom: 15px;
+        }
+
+        .market-description {
+            color: #f0f0f0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .market-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #00aced;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .market-button:hover {
+            background-color: #0088cc;
+        }
+
+        @media (max-width: 768px) {
+            .markets-heading h2 {
+                font-size: 2rem;
+            }
+
+            .market-card {
+                padding: 20px;
+            }
+
+        }
+
+
+
+        body.learn-trade-page {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.learn-trade-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.learn-trade-title {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 30px;
+}
+
+.learn-trade-card {
+    background-color: lightblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-trade-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.learn-trade-card img {
+    width: 180px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.learn-trade-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.learn-trade-card h2 {
+    color: #0077b6;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.learn-trade-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .learn-trade-card {
+        flex-direction: column;
+    }
+
+    .learn-trade-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .learn-trade-content {
+        text-align: center;
+    }
+}
+
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00aced;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: #00aced;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #f0f0f0;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            content: '−';
+            transform: rotate(45deg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        /* Specific Internal Styles for Learn How to Trade Section */
+         
+    </style>
+    
+</head>
+<body>
+    <!-- Header Section with Background Video -->
+    <header class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="bluematrix.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <!-- Navigation -->
+    <nav class="navbar">
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="sign.html">Sign Up</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            <img src="logo2.png" alt="GBX TRADERS">
+            <p style="color: white;">Learn Forex, Crypto, and Indices Trading from Experts</p>
+            <a href="#courses" class="cta-btn">Start Learning</a>
+        </div>
+    </header>
+
+    
+    <body>
+    <section class="markets-section">
+        <div class="markets-container">
+            <div class="markets-heading">
+                <h2>Markets and assets to trade</h2>
+            </div>
+            <div class="markets-grid">
+                <!-- Cryptocurrency Card -->
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/premium-photo/gold-bitcoin-crypto-currency-background-chart-diagram_1017505-495.jpg?w=740" alt="Cryptocurrency trading">
+                    </div>
+                    <h3 class="market-title">Cryptocurrency</h3>
+                    <p class="market-description">
+                        Trade shares to speculate on company stocks without taking ownership. You'll take a position on the direction of the share price by going short or long.
+                    </p>
+                    <button class="market-button">Learn more about trading shares</button>
+                </div>
+
+                <!-- Indices Card -->
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/premium-photo/close-up-line-numbers-that-say-x_1342440-1455.jpg?w=900" alt="Indices trading">
+                    </div>
+                    <h3 class="market-title">Indices</h3>
+                    <p class="market-description">
+                        Get exposure to an entire economy trading indices with us. You'll speculate on the performance of groups of shares by going short or long on rising or falling markets.
+                    </p>
+                    <button class="market-button">Learn more about indices trading</button>
+                </div>
+
+                <!-- ETFs Card -->
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/free-photo/stock-trading-workplace-background_1409-5545.jpg?t=st=1730585450~exp=1730589050~hmac=374b2d4ea561493c7ac779e1e5bb566eb44bd41f1801872e4cff10551d215956&w=900" alt="ETFs trading">
+                    </div>
+                    <h3 class="market-title">ETFs</h3>
+                    <p class="market-description">
+                        Speculate on exchange traded funds or ETFs, which are investment baskets that track the value of individual commodities as well as a collection of stocks.
+                    </p>
+                    <button class="market-button">Learn more about trading ETF</button>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/free-photo/forex-stock-exchange-graph-global-business-concept_53876-122761.jpg?t=st=1730585533~exp=1730589133~hmac=6c2e6ca55076cdb407f3c168909e9d66c23adf366e97becfd710edc09a71b187&w=900" alt="Forex trading">
+                    </div>
+                    <h3 class="market-title">Forex</h3>
+                    <p class="market-description">
+                     Take a long or short position on the conversion of one currency into another. There are several types of forex pairs you can trade against each other.   
+                    </p>
+                    <button class="market-button">Learn more about trading Forex</button>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/free-photo/stock-exchange-trading-forex-finance-graphic-concept_53876-124069.jpg?t=st=1730585672~exp=1730589272~hmac=f2b6eeb67fa0d493ac8bdf68a0a4f953218f812cc40752e7e8bf01c82d0e7cfc&w=900" alt="Thematic  trading">
+                    </div>
+                    <h3 class="market-title">Thematic and Basket</h3>
+                    <p class="market-description">
+                      Form a unique portfolio by grouping certain stocks to speculate via thematic and basket trading. Your portfolio will be based on certain trends in which you take a position on stocks that form part of a theme.  
+                    </p>
+                    <button class="market-button">Learn more about trading Thematic and Basket</button>
+                </div>
+
+                <div class="market-card">
+                    <div class="market-image">
+                        <img src="https://img.freepik.com/free-vector/various-commodities-flat-design-concept-with-farming-products-materials-industrial-processing-vector-illustration_98292-3363.jpg?t=st=1730585823~exp=1730589423~hmac=2458705141edc47189421722a2302c1c42fa6e0f8048bf8ff163a87d85605900&w=740" alt="Forex trading">
+                    </div>
+                    <h3 class="market-title">Commodities</h3>
+                    <p class="market-description">
+                      Choose from a variety of physical goods to buy or sell on the exchange. Trade commodities from different industries, from agriculture and energy to minerals.  
+                    </p>
+                    <button class="market-button">Learn more about trading Commodities</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </section>
+    
+
+
+<body class="learn-trade-page">
+    <div class="learn-trade-container">
+        <h1 class="learn-trade-title">Learn How to Trade</h1>
+
+        <div class="learn-trade-card">
+            <div class="learn-trade-content">
+                <h2>What is trading?</h2>
+                <p>Discover everything you need to know about trading CFDs and the financial instruments you can speculate on.</p>
+            </div>
+        </div>
+
+        <div class="learn-trade-card">
+            <div class="learn-trade-content">
+                <h2>Trading for beginners</h2>
+                <p>Explore the fundamentals of trading using our comprehensive guide for beginners to get started on the right foot, from explanation of trading terminology to how to read charts.</p>
+            </div>
+        </div>
+
+        <div class="learn-trade-card">
+            <div class="learn-trade-content">
+                <h2>How to get into trading</h2>
+                <p>Get started on your trading journey by learning the quick steps of how to get into trading and the risks involved. Then see examples of trades.</p>
+            </div>
+        </div>
+
+        <div class="learn-trade-card">
+            <img src="https://img.freepik.com/free-vector/inflation-vs-deflation-with-arrow-going-up-down_1308-112565.jpg" alt="Trading vs Investing">
+            <div class="learn-trade-content">
+                <h2>Trading vs investing</h2>
+                <p>Explore the differences between trading vs investing, including timeframes for the markets you can speculate on. Remember, with us you can only trade derivatives via CFDs.</p>
+            </div>
+        </div>
+
+        <div class="learn-trade-card">
+            <img src="https://img.freepik.com/premium-photo/african-woman-blogger-with-serious-face-looking-screen-monitor-smartphone-with-stock-market-achievement-high-profit-concept-exchange-investment-online-trading-pc-tastemaker_31965-234324.jpg" alt="How to Trade Online">
+            <div class="learn-trade-content">
+                <h2>How to trade online</h2>
+                <p>Trade global markets 24/7 online. Explore our award-winning trading platform and mobile app, and our unparalleled offering.</p>
+            </div>
+        </div>
+
+        <div class="learn-trade-card">
+            <img src="https://img.freepik.com/premium-photo/african-american-trading-stock-market-exchange_269655-17814.jpg" alt="How to Choose the Right Broker">
+            <div class="learn-trade-content">
+                <h2>How to choose the right broker for you</h2>
+                <p>Choose the best broker for your preferred markets. Learn how to research track records and profiles, and how to assess commissions and other fees.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I start trading?</div>
+            <div class="faq-answer">To start trading, you need to open a trading account with a broker, deposit funds, and begin trading. Research and practice are essential.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can beginners learn to trade?</div>
+            <div class="faq-answer">Beginners can learn to trade by taking online courses, reading trading books, participating in webinars, and using demo accounts to practice without risking real money.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What are the best trading platforms?</div>
+            <div class="faq-answer">The best trading platforms vary based on individual needs but popular ones include MetaTrader 4, MetaTrader 5, and various proprietary platforms offered by brokers.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I start trading stocks and shares?</div>
+            <div class="faq-answer">To start trading stocks and shares, you'll need to open an account with a stockbroker, research stocks to invest in, and use the broker's platform to buy and sell shares.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I start trading forex and currencies?</div>
+            <div class="faq-answer">To start trading forex and currencies, you need to open a forex trading account with a broker, deposit funds, and trade currency pairs. It's important to learn about forex markets and strategies.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const answer = item.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-video-container">
+        <video class="background-video" autoplay muted loop>
+            <source src="bluematrix.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="footer-overlay">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html">Mission & Vision</a></li>
+                        <li><a href="https://www.jobs.ie/jobs/trading?cid=SEA_GO_IE-JIE-GEN---D%7C%7C%5BA%5D_c_general%20DSA--%7C--__RL_DSA1&gad_source=5&gclid=EAIaIQobChMIyurI7tu-iQMVCaKDBx26phrdEAAYASAAEgLXxPD_BwE">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Trading Courses</a></li>
+                        <li><a href="contact.html">Consulting</a></li>
+                        <li><a href="https://www.catalyze-group.com/service/business-consulting/data-insights/market-research/?utm_campaign=&utm_term=&gad_source=5&gclid=EAIaIQobChMIje3xo9y-iQMVhqSDBx3Yih5uEAAYAiAAEgIR-PD_BwE">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.challenge4trading.com/?mi_affiliate=c4t_lp&mi_subaffiliate=2005&mi_tag1=2005_1001&gad_source=5&gclid=EAIaIQobChMIsd-ozNy-iQMVEJ-DBx1DriRFEAAYASAAEgKFgvD_BwE">Blog</a></li>
+                        <li><a href="https://www.audible.co.uk/topic/audiobooks-trading-strategies?&source_code=PS1PP30DTRIAL453072523004T&ipRedirectOverride=true&gclid=EAIaIQobChMIyait7ty-iQMVgFeRBR0K2BCUEAAYAyAAEgKUI_D_BwE&gclsrc=aw.ds">E-books</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=_YVQN6_nkfs">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="contact.html">Email</a></li>
+                        <li><a href="https://syndicatedsearch.goog/aclk?sa=L&ai=DChcSEwiX3NKu3b6JAxU1oYMHHQ22NYoYABACGgJlZg&co=1&ase=2&gclid=EAIaIQobChMIl9zSrt2-iQMVNaGDBx0NtjWKEAAYASAAEgJZ-fD_BwE&sig=AOD64_3WP9WDQyDd4vjgdckx2uBSRlxw4g&q&nis=4&adurl=https://www.aquafunded.com/blogs/funded-trading-accounts?gc_id%3D21762747573%26h_ad_id%3D%26gad_source%3D5&nb=0&rurl=https%3A%2F%2Fwww.startpage.com%2F&nm=27&nx=257&ny=13&is=598x1082">Support</a></li>
+                        <li><a href="https://traders4traders.com/contact-us/">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://ls.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://twitter.com/login"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
